@@ -1,0 +1,33 @@
+productName: "FluffyPenguin"
+appId: "com.ffpenguin.desktop"
+
+directories:
+  output: "release"
+
+files:
+  - "!plugins/"
+
+extraResources:
+  - from: "plugins/${os}/${arch}"
+    to: "plugins"
+    filter:
+      - "**/*"
+
+mac:
+  target: "dmg"
+
+win:
+  target:
+    - "nsis"
+    - "portable"
+
+nsis:
+  deleteAppDataOnUninstall: true
+
+linux:
+  target: "deb"
+
+protocols:
+  - name: "FluffyPenguin"
+    schemes:
+      - "ffpenguin"

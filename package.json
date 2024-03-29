@@ -1,0 +1,33 @@
+{
+  "name": "ffpenguin-app",
+  "version": "1.5.9",
+  "description": "FluffyPenguin desktop app.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ifluffypenguin/ffpenguin-app"
+  },
+  "license": "MIT",
+  "author": "FluffyPenguin <support@fluffyp.ninja>",
+  "bugs": {
+    "url": "https://github.com/ifluffypenguin/ffpenguin-app/issues"
+  },
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-builder --publish never",
+    "release-win": "electron-builder --publish always --x64 --ia32 --linux --win",
+    "release-mac": "electron-builder --publish always"
+  },
+  "homepage": "https://play.fluffyp.ninja/",
+  "dependencies": {
+    "discord-rpc": "^4.0.1",
+    "electron-updater": "^6.1.8",
+    "electron-window-state": "^5.0.3"
+  },
+  "devDependencies": {
+    "electron": "^11.5.0",
+    "electron-builder": "^24.13.3"
+  },
+  "optionalDependencies": {
+    "dmg-license": "^1.0.11"
+  }
+}

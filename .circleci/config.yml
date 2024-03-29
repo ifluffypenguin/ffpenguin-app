@@ -1,0 +1,22 @@
+version: 2
+jobs:
+  build_windows:
+    docker:
+      - image: electronuserland/builder:wine
+    steps:
+      - checkout
+      - run: npm i --no-optional && npm run release-win
+
+  build_macos:
+    macos:
+      xcode: "14.0.0"
+    steps:
+      - checkout
+      - run: npm i && npm run release-mac
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build_windows
+      - build_macos
