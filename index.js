@@ -58,15 +58,6 @@ if (app.requestSingleInstanceLock()) {
       shell.openExternal(url);
     });
 
-    // Prevent opening links unrelated to FluffyPenguin
-    mainWindow.webContents.on('will-navigate', (event, url) => {
-      const urlHostname = new URL(url).origin.split(".").slice(-2).join(".");
-  
-      if (!["fluffyp.ninja", "fluffypenguin.com"].includes(urlHostname)) {
-        event.preventDefault();
-      }
-    });
-
     // Display context menu
     mainWindow.webContents.on('context-menu', (_event, params) => {
       Menu.getApplicationMenu().popup(mainWindow, params.x, params.y);
