@@ -10,7 +10,7 @@ jobs:
   build_macos:
     macos:
       xcode: "15.4.0"
-    resource_class: large
+    resource_class: macos.m1.medium.gen1
     steps:
       - checkout
       - run: npm i && npm run release-mac
