@@ -9,8 +9,8 @@ jobs:
 
   build_macos:
     macos:
-      xcode: "16.1.0"
-    resource_class: m4pro.medium
+      xcode: "15.4.0"
+    resource_class: large
     steps:
       - checkout
       - run: npm i && npm run release-mac
