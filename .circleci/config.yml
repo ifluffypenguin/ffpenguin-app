@@ -9,7 +9,8 @@ jobs:
 
   build_macos:
     macos:
-      xcode: "14.0.0"
+      xcode: "14.2.0"
+    resource_class: macos.x86.medium.gen2
     steps:
       - checkout
       - run: npm i && npm run release-mac

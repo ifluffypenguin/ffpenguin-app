@@ -64,7 +64,7 @@ if (app.requestSingleInstanceLock()) {
     });
 
     // Load the URL into the main window and add custom user-agent
-    mainWindow.loadURL('https://play.fluffyp.ninja', {
+    mainWindow.loadURL('https://play.fluffypenguin.xyz', {
       userAgent: mainWindow.webContents.getUserAgent() + ' FluffyPenguin/' + app.getVersion(),
     });
 
